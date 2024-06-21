@@ -3,6 +3,8 @@ let nombre = document.querySelector('.signature-right h5');
 let cargo = document.querySelector('.signature-right_position');
 let correo = document.querySelector('.signature-right_email p');
 
+let nano = document.getElementById('name');
+
 let objeto = {
     names: " ",
     lastnames: " ",
@@ -15,7 +17,7 @@ function saveLocal() {
 }
 
 
-function readName (e) {
+function setName (e) {
     objeto.names = e.target.value;
     saveLocal();
 
@@ -24,7 +26,7 @@ function readName (e) {
     nombre.innerHTML = objeto.names + ' ' +  dato.lastnames;
 }
 
-function readLastName (e) {
+function setLastName (e) {
     objeto.lastnames = e.target.value;
     saveLocal();
 
@@ -32,14 +34,14 @@ function readLastName (e) {
     nombre.innerHTML = dato.names + ' ' + objeto.lastnames;
 }
 
-function readPosition (e) {
+function setPosition (e) {
     objeto.position = e.target.value;
     saveLocal();
 
     cargo.innerHTML = objeto.position;
 }
 
-function readEmail (e) {
+function setEmail (e) {
     objeto.email = e.target.value;
     saveLocal();
 
@@ -49,7 +51,7 @@ function readEmail (e) {
 function change () {
     let dato = JSON.parse(localStorage.getItem("datos"));
 
-    nombre.innerHTML = dato.names + dato.lastnames;
+    nombre.innerHTML = dato.names + ' ' +  dato.lastnames;
     cargo.innerHTML = dato.position;
     correo.innerHTML = dato.email;
 }
