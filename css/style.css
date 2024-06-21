@@ -183,7 +183,7 @@ form .form-buttom-create:active {
 }
 
 .container::-webkit-scrollbar {
-     width: 10px;
+    width: 10px;
 }
 
 /* Track */
@@ -226,6 +226,7 @@ form .form-buttom-create:active {
 
     overflow: hidden;
 
+    background-color: #fff;
     background-image: url("../images/background.PNG");
     background-size: cover;
 }

@@ -1,3 +1,22 @@
+function autoClick() {
+    $("#download").click();
+}
+
+$(document).ready(function(){
+    let element = $("#signature");
+
+    $("#download").on('click', function() {
+        html2canvas(element, {
+            onrendered: function(canvas) {
+                let imageData = canvas.toDataURL("image/jpg");
+                let newData = imageData.replace(/^data:image\/jpg/, "data:application/octet-strean");
+
+                $("#download").attr("download", "image.jpg").attr("href", newData);
+            }
+        });
+    });
+})
+
 
 let nombre = document.querySelector('.signature-right h5');
 let cargo = document.querySelector('.signature-right_position');
@@ -55,22 +74,3 @@ function change () {
     cargo.innerHTML = dato.position;
     correo.innerHTML = dato.email;
 }
-
-function autoClick() {
-    $("#download").click();
-}
-
-$(document).ready(function(){
-    var element = $("#signature");
-
-    $("#download").on('click', function() {
-        html2canvas(element, {
-            onrendered: function(canvas) {
-                var imageData = canvas.toDataURL("image/jpg");
-                var newData = imageData.replace(/^data:image\/jpg/, "data:application/octet-strean");
-
-                $("#download").attr("download", "image.jpg").attr("href", newData);
-            }
-        });
-    });
-})
