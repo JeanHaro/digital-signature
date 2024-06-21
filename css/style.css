@@ -1,0 +1,366 @@
+/* 
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+*/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    position: relative;
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+
+    color: #545454;
+}
+
+/* Global */
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+h1, h2, h3, h4, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 3.2rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+h5 {
+    margin: 0;
+    padding: 0;
+
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+span {
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* Formulario */
+.form {
+    background-color: #f9f9f9;
+    padding: 6rem 2rem;
+    border-radius: 1rem;
+}
+
+.form-content {
+    max-width: 375px;
+    margin: auto;
+}
+
+@media (min-width: 920px) {
+    main {
+        display: flex;
+        height: 100vh;
+    }
+
+    .form {
+        flex-basis: calc(30%);
+
+        display: flex;
+        align-items: center;
+    }
+
+    .form-content {
+        max-width: 375px;
+        width: 100%;
+    }
+}
+
+.form h2 {
+    margin-bottom: 3.5rem;
+    text-transform: capitalize;
+}
+
+.form .form-top > div,
+.form .form-bottom > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.form input {
+    font-family: "Poppins", sans-serif;
+    padding: 1rem;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 0.8rem 0.8rem 0 0;
+    border-bottom: 2px solid #222;
+    margin-top: 0.8rem;
+}
+
+.form .form-buttom-create {
+    font-family: "Poppins", sans-serif;
+    background-color: #F48120;
+    color: #fff;
+    margin-top: 4rem;
+    border-radius: 0.8rem;
+    padding: 1.5rem 1rem;
+    width: 100%;
+
+    cursor: pointer;
+    transition: 0.5s ease;
+    text-align: center;
+}
+
+form .form-buttom-create:hover {
+    background-color: #BB3E03; 
+}
+
+form .form-buttom-create:active {
+    transform: scale(0.9); 
+}
+
+
+/* Contenido */
+.container {
+    width: 100%;
+    padding: 10rem;
+
+    background-color: #e0e0e0;
+    overflow: scroll;
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.container::-webkit-scrollbar {
+     width: 10px;
+}
+
+/* Track */
+.container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+.container::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+.container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@media (min-width: 768px) {
+    .container {
+        justify-content: center;
+    }
+}
+
+@media (min-width: 920px) {
+    .container {
+        flex-basis: calc(70%);
+    }
+}
+
+.signature {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 550px;
+    min-width: 550px;
+    width: 550px;
+    height: 250px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background-image: url("../images/background.PNG");
+    background-size: cover;
+}
+
+
+.signature .phrase-logo {
+    position: absolute;
+    right: -110px;
+    bottom: -80px;
+
+    width: 280px;
+
+    z-index: 1;
+}
+
+.signature .signature-content {
+    display: flex;
+}
+
+.signature .signature-content .signature-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    flex-basis: calc(40%);
+    z-index: 2;
+
+    margin-bottom: 1rem;
+}
+
+
+.signature-content .signature-left > img {
+    width: 180px;
+    margin-bottom: -7rem;
+}
+
+.signature-content .signature-left .signature-left_socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signature-left .signature-left_socials .socials {
+    display: flex;
+    justify-content: center;
+}
+
+.signature-left_socials .socials img {
+    width: 5rem;
+    margin-right: -1.5rem;
+}
+
+
+.signature-left_socials .socials img:last-child {
+    margin-right: 0;
+}
+
+
+.signature .signature-content .signature-right {
+    flex-basis: calc(60%);
+
+    padding: 2rem;
+    font-size: 1.4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+}
+
+
+.signature-content .signature-right h5 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+
+.signature-content .signature-right .signature-right_email, 
+.signature-content .signature-right .signature-right_web {
+    display: flex;
+    align-items: center;
+
+}
+
+.signature-content .signature-right .signature-right_email {
+    border-top: 1.5px solid #c3c3c3;
+    padding-top: 1rem;
+    
+    margin-top: 1rem;
+}
+
+.signature-content .signature-right .signature-right_web {
+    margin-top: 0;
+}
+
+.signature-right .signature-right_email img,
+.signature-right .signature-right_web img {
+    width: 3rem;
+}
+
+.signature-right .signature-right_email p,
+.signature-right .signature-right_web p {
+    font-size: 1.4rem;
+}
+
+.signature .phrase {
+    position: relative;
+
+    width: 78%;
+    align-self: flex-end;
+
+    padding: 3rem;
+    z-index: 1;
+}
+
+.signature .phrase .border-img {
+    position: absolute;
+    right: -180px;
+    top: -230px;
+    min-width: 560px;
+    min-height: 500px;
+    z-index: 0;
+}
+
+.signature .phrase p {
+    position: absolute;
+    top: 42px;
+    right: -100px;
+    color: #fff;
+    width: 20rem;
+    height: 50rem;
+    z-index: 60px;
+    width: 100%;
+
+    font-size: 0.9rem;
+}
