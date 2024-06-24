@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+    <title>Firma Tismart</title>
+</head>
+<body onchange="autoClick();" onload="change();">
+    <main>
+        <form class="form" action="#">
+            <div class="form-content">
+                <h2>Firma digital</h2>
+    
+                <div class="form-top">
+                    <div class="form-name">
+                        <label for="name">Nombres:</label>
+                        <input onkeyup="setName(event);" type="text" name="name" id="name">
+                    </div>
+            
+                    <div class="form-lastname">
+                        <label for="lastname">Apellidos:</label>
+                        <input onkeyup="setLastName(event);" type="text" name="lastname" id="lastname">
+                    </div>
+                </div>
+                
+        
+                <div class="form-bottom">
+                    <div class="form-position">
+                        <label for="position">Cargo:</label>
+                        <input onkeyup="setPosition(event);" type="text" name="position" id="position">
+                    </div>
+            
+                    <div class="form-email">
+                        <label for="email">Email:</label>
+                        <input onkeyup="setEmail(event);" type="email" name="email" id="email">
+                    </div>
+                </div>
+        
+                <div class="form-button">
+                    <a id="download" class="form-buttom-create">Generar</a>
+                </div>
+            </div>
+        </form>
+    
+        <section class="container">
+            <div id="signature" class="signature">
+
+                <img class="phrase-logo" src="./images/logo-white.png" alt="Logo de tismart blanco">
+
+                <div class="signature-content">
+                    <div class="signature-left">
+                        <img src="images/logo.png" alt="Logo de Tismart">
+            
+                        <div class="signature-left_socials asdasd">
+                            <p>Siguenos en:</p>
+                            
+                            <div class="socials">
+                                <img src="./images/1.svg" alt="Icono de Instagram">
+                                <img src="./images/2.svg" alt="Icono de Linkedin">
+                                <img src="./images/3.svg" alt="Icono de Tik Tok">
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="signature-right">
+                        <h5>  </h5>
+                        <p class="signature-right_position">  </p>
+            
+            
+                        <div class="signature-right_email">
+                            <img src="./images/envelope.png" alt="Icono de email">
+                            <p>  </p>
+                        </div>
+            
+                        <div class="signature-right_web">
+                            <img src="./images/web.png" alt="Icono de web">
+                            <p>tismart.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="phrase">
+                    <img class="border-img" src="./images/borde.png" alt="borde de abajo de la firma">
+                    <p>"Impulsados por la tecnología, transformamos la vida de las personas"</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="./main.js"></script>
+</html>
